@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cmkyiadxxf81x"]
+
+[ext_resource type="Script" uid="uid://76bedwekb8kx" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="FontFile" uid="uid://c8dpu8xvtnykw" path="res://assets/retro.ttf" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://elutqdu06w4f" path="res://scenes/background.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node2D" unique_id=1304290337]
+script = ExtResource("1_uwrxv")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1204329714]
+top_level = true
+offset_left = 475.0
+offset_top = 50.0
+offset_right = 1115.0
+offset_bottom = 690.0
+
+[node name="GUI" type="Control" parent="." unique_id=1914619440]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="score" type="Label" parent="GUI" unique_id=1466022055]
+top_level = true
+layout_mode = 0
+offset_left = 66.0
+offset_top = 60.0
+offset_right = 283.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("2_yqjtg")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: 100"
+
+[node name="timer" type="Label" parent="GUI" unique_id=183155893]
+top_level = true
+layout_mode = 0
+offset_left = 66.0
+offset_top = 140.0
+offset_right = 283.0
+offset_bottom = 195.0
+theme_override_fonts/font = ExtResource("2_yqjtg")
+theme_override_font_sizes/font_size = 40
+text = "Time: 100"
+
+[node name="Timer" type="Timer" parent="." unique_id=365016444]
+one_shot = true
+
+[node name="Background" parent="." unique_id=1545438321 instance=ExtResource("3_lnu2h")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

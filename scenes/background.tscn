@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://elutqdu06w4f"]
+
+[ext_resource type="Texture2D" uid="uid://doj2501iw466y" path="res://assets/HomeScreen-BG.png" id="1_bkp1e"]
+
+[node name="Background" type="Parallax2D" unique_id=629000190]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1840844189]
+scale = Vector2(0.64, 0.8)
+texture = ExtResource("1_bkp1e")
+centered = false

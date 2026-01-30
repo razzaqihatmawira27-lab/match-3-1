@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cahoxp8gdas00"]
+
+[ext_resource type="Texture2D" uid="uid://b4nidkbiq2qvj" path="res://icon.svg" id="1_3dk36"]
+[ext_resource type="Script" uid="uid://4b2fssor6o67" path="res://scripts/tile.gd" id="1_ywnoi"]
+
+[node name="Tile" type="Button" unique_id=1735707191]
+custom_minimum_size = Vector2(66, 66)
+offset_right = 66.0
+offset_bottom = 66.0
+script = ExtResource("1_ywnoi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=47748003]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 40.0
+texture = ExtResource("1_3dk36")
+expand_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=170026856]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 66.0
+color = Color(1, 1, 1, 0.4509804)
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
